@@ -8,21 +8,24 @@
 
 function setup(){
   createCanvas(windowWidth,windowHeight);
-  x = width / 2;
-  rectMode(CORNER);
+  x = 300;
+  y = 300;
+  c = color(200,0,0);
 }
 
 function draw(){
-  background(135,0,0);
-  fill(255,0,0);
-  circle(mouseX,mouseY,80);
-  noStroke();
-  rect()
-}
-
-function quad(){
-  fill(135,206,235);
-  quad(20, 20, 80, 20, 80, 80, 20, 80);
-  noStroke();
-  rect();
+  //mountains
+  fill(100,100,100);
+  ellipse(1000,height-150,2500,750);
+  ellipse(250,height-30,2500,700);
+  //green ground
+  fill(34,139,34);
+  rect(0, height-70, width, 80);
+  //sun
+  fill(255,255,0);
+  ellipse(120,100,200,200);
+  //moving character
+  fill(c);
+  ellipse(x,y,10,20);
+  rect(x-10.5,y,20,30);
 }
